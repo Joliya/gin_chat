@@ -2,7 +2,6 @@ package util
 
 import (
 	"github.com/spf13/viper"
-	"gorm.io/driver/mysql"
 	"gorm.io/gorm"
 )
 
@@ -19,5 +18,5 @@ func InitConfig() {
 }
 
 func InitMysql() {
-	DB, _ = gorm.Open(mysql.Open(viper.GetString("mysql.dns")), *gorm.Config{})
+	//DB, _ = gorm.Open(mysql.Open(viper.GetString("mysql.dns")), *gorm.Config{})
 }
